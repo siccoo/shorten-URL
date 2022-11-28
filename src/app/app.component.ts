@@ -7,7 +7,7 @@ import { ApiService } from './api.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  urlShortnerData: {} | any;
+  // urlShortnerData: {} | any;
 
   model = {
     inputUrl: '',
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     // API Call
     this.api.getUrlShortener().subscribe((data) => {
-      this.urlShortnerData = data;
+      // this.urlShortnerData = data;
       console.log(data)
     });
   }

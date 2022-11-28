@@ -9,6 +9,6 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getUrlShortener() {
-    return this.http.get('https://api.shrtco.de/v2/')
+    return this.http.get('https://api.shrtco.de/v2/shorten')
   }
 }
