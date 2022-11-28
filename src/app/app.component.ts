@@ -7,23 +7,26 @@ import { ApiService } from './api.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  // urlShortnerData: {} | any;
+  urlShortnerData: {} | any;
 
   model = {
     inputUrl: '',
   };
+
+  isLoading = false;
+
 // Implementing OnInit
   constructor(private api: ApiService) {}
 
   ngOnInit() {
     // API Call
     this.api.getUrlShortener().subscribe((data) => {
-      // this.urlShortnerData = data;
+      this.urlShortnerData = data;
       console.log(data)
     });
   }
 
-  onSubmitUrlForm() {
-    console.log('Form submitted!!');
+  onSubmitUrlForm(urlForm: any) {
+    console.warn('Form submitted!!');
   }
 }
