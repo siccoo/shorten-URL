@@ -4,12 +4,23 @@
 
 <section class="container">
   <form
-    #urlForm="ngForm"
-    (ngSubmit)="onSubmitUrlForm(urlForm)"
+
     novalidate
     autocomplete="off"
   >
-<input type="url" class="form-input" placeholder="Input the URL" />
-<button type="submit" class="form-btn">Shorten</button>
+<input name="inputUrl" type="url" class="form-input" placeholder="Input the URL"  />
+
+<!-- <div
+      class="form-error"
+      [hidden]="(inputUrl.valid || inputUrl.pristine) && inputUrl.errors"
+    >
+      <p *ngIf="inputUrl.errors && inputUrl.errors.required">
+        Please Enter URL.
+      </p>
+    </div> -->
+
+<button type="submit"  class="form-btn">
+  Shorten
+</button>
 </form>
 </section>

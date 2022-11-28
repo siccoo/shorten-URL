@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'url-shortner';
+  // title = 'url-shortner';
+  model = {
+inputUrl: '',
+  };
+
+  constructor(private http: HttpClient) {}
+
+  onSubmitUrlForm() {
+    console.log("Form submitted!!")
+  }
 }
